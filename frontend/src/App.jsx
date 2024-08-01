@@ -24,6 +24,9 @@ function App() {
         />
         <button type="submit">Send</button>
       </form>
+      <div>
+        <button onClick={handleasd}>asd</button>
+      </div>
     </>
   );
 }
