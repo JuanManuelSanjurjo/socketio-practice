@@ -1,6 +1,6 @@
 import io from "socket.io-client";
 import "./App.css";
-import { useState } from "react";
+import { useState, useCallback } from "react";
 
 const socket = io("/");
 
@@ -11,9 +11,6 @@ function App() {
     e.preventDefault();
     socket.emit("message", message);
   };
-  const handleasd = useCallback(() => {
-    console.log("asd");
-  }, []);
   return (
     <>
       <form onSubmit={handleSubmit}>
@@ -24,9 +21,6 @@ function App() {
         />
         <button type="submit">Send</button>
       </form>
-      <div>
-        <button onClick={handleasd}>asd</button>
-      </div>
     </>
   );
 }
